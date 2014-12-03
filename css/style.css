@@ -1,0 +1,48 @@
+.container{
+	width: 80%;
+}
+
+.form-control{
+	width: 100%;
+	resize: none;
+}
+
+.form-group{
+	display: inline-block;
+	width: 46%;
+}
+
+.form-group+.form-group{
+	margin-left: 8%;
+}
+
+h3, textarea{
+	display: inline-block !important;
+	width: 100%;
+}
+
+.f1{
+	float: left;
+}
+
+.f2{
+	float: right;
+}
+
+.f3{
+	display: block;
+	width: 46%;
+	margin: auto;
+	margin-bottom: 40px;
+}
+
+.btn{
+	margin: auto;
+	margin-top: 30px;
+	display: block;
+}
+
+.paramType{
+	padding-top: 6px;
+	padding-bottom: 7px;
+}
