@@ -1,8 +1,8 @@
 <html>
 <head>
 	<title>Request to Json</title>
-	<link rel="stylesheet" type="text/css" href="/RequestToHeader/css/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/RequestToHeader/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/Request-to-json/css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/Request-to-json/css/style.css">
 </head>
 <body>
 	<div class="jumbotron">
@@ -32,8 +32,8 @@
     		<textarea id="head" class="form-control" rows="20"></textarea>
     	</div>
     </div>
-    <script type="text/javascript" src="/RequestToHeader/js/jquery.js"></script>
-	<script type="text/javascript" src="/RequestToHeader/js/zeroclipboard/dist/ZeroClipboard.min.js"></script>
-	<script type="text/javascript" src="/RequestToHeader/js/js.js"></script>
+    <script type="text/javascript" src="/Request-to-json/js/jquery.js"></script>
+	<script type="text/javascript" src="/Request-to-json/js/zeroclipboard/dist/ZeroClipboard.min.js"></script>
+	<script type="text/javascript" src="/Request-to-json/js/js.js"></script>
 </body>
 </html>
