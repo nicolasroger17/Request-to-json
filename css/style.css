@@ -1,5 +1,6 @@
 .jumbotron{
 	padding: 30px 0;
+	margin-bottom: 16px;
 }
 
 .container{
@@ -35,7 +36,7 @@ h3, textarea{
 
 .f3{
 	display: block;
-	width: 46%;
+	width: 80%;
 	margin: auto;
 	margin-bottom: 40px;
 }

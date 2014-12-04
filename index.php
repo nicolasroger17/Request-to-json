@@ -23,7 +23,6 @@
     	<div class="jumbotron">
           <div class="container">
             <h1>Request to Json</h1>
-            <p>Paste your request in the first box</p>
           </div>
         </div>
         <div class="container">
@@ -44,7 +43,7 @@
         
         	<div class="form-group f3">
         		<h3>Json:</h3>
-        		<textarea id="head" class="form-control" rows="12"></textarea>
+        		<textarea id="head" class="form-control" rows="15"></textarea>
         	</div>
         </div>
         <script type="text/javascript" <?php echo "src='" . $path . "/js/jquery.js'"; ?>></script>
