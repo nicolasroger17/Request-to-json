@@ -7,7 +7,7 @@
     );
 
     $path = "";
-    if(in_array($_SERVER['REMOTE_ADDR'], $whitelist))
+    if(in_array($_SERVER['HTTP_HOST'], $whitelist))
         $path = "/Request-to-json";
 ?>
 
