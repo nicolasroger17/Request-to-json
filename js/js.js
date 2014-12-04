@@ -1,11 +1,11 @@
 var url = ["http://",""];
 
 function parseRequest(){
-	var requestInfo = "requestsInfo = {\n";
+	var requestInfo = "requestInfos = {\n";
 	requestInfo += "\t'url': '";
 
 	var tempReq = "',\n";
-	tempReq += "\t'method': '" + $("input[name='param']:checked").val() + "',\n";
+	tempReq += "\t'method': '" + $("input[name='param']:checked").val().toUpperCase() + "',\n";
 	tempReq += parseHeader();
 
 	if(url[0] != "" && url[1] != "")
