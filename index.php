@@ -3,6 +3,7 @@
 	<title>Request to Json</title>
 	<link rel="stylesheet" type="text/css" href="/Request-to-json/css/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/Request-to-json/css/style.css">
+    <link rel="icon" type="image/png" href="/Request-to-json/favicon.png" />
 </head>
 <body>
 	<div class="jumbotron">
