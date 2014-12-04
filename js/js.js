@@ -75,8 +75,16 @@ function parseLine(line, nbTabs){
 		data[1] = data[1].replace(" ", "");
 	if(data[0] == "Host")
 		setUrl(data[1], true);
-	if(data[0] != "" && data[0] != "Connection" && data[0] != "Host" && data[0] != "Cookie")
-		return ret + data[0] + "': '" + data[1] + "',\n";
+	if(data[0] != "" && data[0] != "Connection" && data[0] != "Host" && data[0] != "Cookie"){
+		ret += data[0] + "': '";
+		for(var i = 1; i < data.length; i++){
+			if(i > 1)
+				ret += ":";
+			ret += data[i];
+		}
+		ret += "',\n";
+		return ret;
+	}
 	return false;
 }
 
