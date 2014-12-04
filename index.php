@@ -1,4 +1,16 @@
-<?php $path = "/Request-to-json"; ?>
+<?php
+
+    $whitelist = array(
+        '127.0.0.1',
+        '::1',
+        'localhost'
+    );
+
+    $path = "";
+    if(in_array($_SERVER['REMOTE_ADDR'], $whitelist))
+        $path = "/Request-to-json";
+?>
+
 <html>
     <head>
     	<title>Request to Json</title>
