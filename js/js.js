@@ -29,6 +29,7 @@ function parseRequest(){
 
 	var tempReq = "',\n";
 	tempReq += "\t'method': '" + $("input[name='param']:checked").val().toUpperCase() + "',\n";
+	tempReq += "\t'pageFile': " + "'tempFile.html',\n";
 	tempReq += parseHeader();
 
 	if(url[0] != "" && url[1] != "")
