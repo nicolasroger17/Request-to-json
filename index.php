@@ -39,12 +39,13 @@
         		<textarea id="param" class="form-control" rows="9"></textarea>
         	</div>
         	<div style='clear:both'></div>
-        	<button id="transform" title="Copy header" data-clipboard-target='head' class="btn btn-primary">Transform</button>
+        	<button id="transform" class="btn btn-primary">Transform</button>
         
         	<div class="form-group f3">
         		<h3>JSON:</h3>
-        		<textarea id="head" class="form-control" rows="15"></textarea>
+        		<textarea id="head" class="form-control" rows="12"></textarea>
         	</div>
+            <button id="copy" title="Copy header" data-clipboard-target='head' class="btn btn-primary">Copy to clipboard</button>
         </div>
         <script type="text/javascript" <?php echo "src='" . $path . "/js/jquery.js'"; ?>></script>
     	<script type="text/javascript" <?php echo "src='" . $path . "/js/zeroclipboard/dist/ZeroClipboard.min.js'"; ?>></script>

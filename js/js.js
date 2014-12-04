@@ -1,6 +1,29 @@
-var url = ["http://",""];
+$(document).ready(function(){
+	$("#transform").click(function(){
+		parseRequest();
+	});
+
+	var clip = new ZeroClipboard($("#copy"));
+
+	clip.on("ready", function() {
+
+		/*
+		this.on("beforecopy", function(event) {
+			parseRequest();
+		});
+		*/
+
+		clip.on("error", function(event) {
+		ZeroClipboard.destroy();
+		});
+
+	});
+});
+
+var url;
 
 function parseRequest(){
+	url = ["http://",""];
 	var requestInfo = "requestInfos = {\n";
 	requestInfo += "\t'url': '";
 
@@ -87,22 +110,6 @@ function parseLine(line, nbTabs){
 	}
 	return false;
 }
-
-$(document).ready(function() {
-	var clip = new ZeroClipboard($("#transform"));
-
-	clip.on("ready", function() {
-
-	    this.on("beforecopy", function(event) {
-	    	parseRequest();
-	    });
-
-	  clip.on("error", function(event) {
-	    ZeroClipboard.destroy();
-	  });
-
-	});
-});
 
 Array.prototype.clean = function(deleteValue) {
   for (var i = 0; i < this.length; i++) {
