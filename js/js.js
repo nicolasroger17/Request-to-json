@@ -1,39 +1,57 @@
 function parseRequest(){
-	var header = "headers = {\n";
+	var requestInfo = "requestsInfo = {\n";
+	requestInfo += "\t'url: '',\n";
+	requestInfo += "\t'method': '" + $("input[name='param']:checked").val() + "',\n";
+	requestInfo += parseHeader();
+
+	var params = $("#param").val();
+	if(params != "")
+		requestInfo += parseParam();
+	
+	requestInfo += "}";
+	$("#head").val(requestInfo);
+}
+
+function parseHeader(){
+	var header = "\theaders : {\n";
 	var lines = $("#req").val().split('\n').clean("");
 
-	console.log(lines.length);
 	for(var i = 1; i < lines.length; i++){
-		var p = parseLine(lines[i], false);
+		var p = parseLine(lines[i], 2);
 		if(p != false)
 			header += p;
 	}
+	header = header.slice(0, header.length - 2) + "\n\t},\n";
 
-	var secondInput = $("#param").val();
-	if(secondInput != ""){
-		if($("input[name='param']:checked").val() == "get")
-			header += "\t'params': {\n";
-		else
-			header += "\t'payload': {\n";
-
-		lines = secondInput.split('\n');
-		console.log(lines);
-		for(var i = 0; i < lines.length; i++){
-			var p = parseLine(lines[i], true);
-			if(p != false)
-				header += p;
-		}
-		header += "\t},\n";
-	}
-	
-	header = header.slice(0, header.length - 2) + "\n}";
-	$("#head").val(header);
-	console.log(header);
+	return header;
 }
 
-function parseLine(line, twoTabs){
+function parseParam(){
+	var ret = "";
+
+	if($("input[name='param']:checked").val() == "get")
+			ret += "\t'params': {\n";
+		else
+			ret += "\t'payload': {\n";
+
+		lines = $("#param").val().params.split('\n').clean("");
+
+		for(var i = 0; i < lines.length; i++){
+			var p = parseLine(lines[i], 2);
+			if(p != false)
+				ret += p;
+		}
+		ret += "\t}\n";
+	return ret;
+}
+
+function parseLine(line, nbTabs){
 	var data = line.split(":");
-	var ret = (twoTabs?"\t\t'":"\t'");
+	var ret = "";
+	for(var i = 0; i < nbTabs; i++)
+		ret += "\t";
+	ret += "'";
+
 	if(data[1][0] == " ")
 		data[1] = data[1].replace(" ", "");
 	if(data[0] != "" && data[0] != "Connection" && data[0] != "Host" && data[0] != "Cookie")
