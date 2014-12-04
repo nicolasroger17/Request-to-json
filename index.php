@@ -1,9 +1,8 @@
 <?php
-
+    
     $whitelist = array(
         '127.0.0.1',
-        '::1',
-        'localhost'
+        '::1'
     );
 
     $path = "";
@@ -13,6 +12,7 @@
 
 <html>
     <head>
+        <!-- v1 -->
     	<title>Request to Json</title>
     	<link rel="stylesheet" type="text/css" <?php echo "href='" . $path . "/css/bootstrap/css/bootstrap.min.css'"; ?>>
     	<link rel="stylesheet" type="text/css" <?php echo "href='" . $path . "/css/style.css'"; ?>>
