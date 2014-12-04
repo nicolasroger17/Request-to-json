@@ -5,7 +5,7 @@ function parseRequest(){
 	for(var i = 1; i < lines.length; i++){
 		var key = lines[i].substring(0, lines[i].indexOf(":"));
 		console.log(key);
-		if(key != "Connection" && key != "Host" && key != "Cookie")
+		if(key != "" && key != "Connection" && key != "Host" && key != "Cookie")
 			header += "\t'" + key + "': '" + lines[i].substring(key.length + 2, lines[i].length) + "',\n";
 	}
 

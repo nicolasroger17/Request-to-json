@@ -2,7 +2,8 @@
     
     $whitelist = array(
         '127.0.0.1',
-        '::1'
+        '::1',
+        'localhost'
     );
 
     $path = "";
@@ -28,7 +29,7 @@
         <div class="container">
         	<div class="form-group f1">
         		<h3>Request:</h3>
-        		<textarea id="req" class="form-control" rows="20"></textarea>
+        		<textarea id="req" class="form-control" rows="11"></textarea>
         	</div>
         	<div class="form-group f2">
         		<h3>Params:</h3>
@@ -36,14 +37,14 @@
     	    		<label>Get: <input type='radio' name='param' value='get' checked></label>
     	    		<label>Post: <input type='radio' name='param' value='post'></label>
     	    	</div>
-        		<textarea id="param" class="form-control" rows="18"></textarea>
+        		<textarea id="param" class="form-control" rows="9"></textarea>
         	</div>
         	<div style='clear:both'></div>
         	<button id="transform" title="Copy header" data-clipboard-target='head' class="btn btn-primary">Transform</button>
         
         	<div class="form-group f3">
         		<h3>Json:</h3>
-        		<textarea id="head" class="form-control" rows="20"></textarea>
+        		<textarea id="head" class="form-control" rows="12"></textarea>
         	</div>
         </div>
         <script type="text/javascript" <?php echo "src='" . $path . "/js/jquery.js'"; ?>></script>
